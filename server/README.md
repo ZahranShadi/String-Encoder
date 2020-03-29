@@ -14,7 +14,7 @@ npm run start-all
 
 # Login Credentials
 
-email: optimus.prime@autobots.com => password: validPassword1234!\n
+email: optimus.prime@autobots.com => password: validPassword1234!<br/>
 email: tester@test.com => password: tester1
 
 # Testing
