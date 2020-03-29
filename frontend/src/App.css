@@ -1,0 +1,146 @@
+.App {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.Cover {
+  height: 100%;
+  width: 100%;
+
+  animation: blur 2s linear;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.bg-text {
+  background-color: rgb(5, 7, 28);
+  background-color: rgba(5, 7, 28, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.show {
+  animation: move-from-top 1s;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hide {
+  animation: move-out-to-top 1s;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.login-div {
+  background-color: rgba(5, 7, 28, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.encoder {
+  height: 300px;
+  line-height: 300px;
+  width: 300px;
+  text-align: center;
+  font-family: "Lucida Console";
+  font-size: 2rem;
+  border-radius: 10px;
+
+  background: linear-gradient(to right, #a9f1e6 50%, #f5f5f5 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 1s ease;
+
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+}
+
+.encoder.process {
+  background-position: left bottom;
+}
+
+.encoderLine {
+  height: 3px;
+  width: 100px;
+
+  background: linear-gradient(to right, #a9f1e6 50%, #f5f5f5 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+
+  position: absolute;
+  top: calc(50%);
+}
+
+.encoderLine.left {
+  left: calc(50% - 150px - 100px);
+}
+
+.encoderLine.right {
+  left: calc(50% + 150px);
+}
+
+.encoderLine.process {
+  background-position: left bottom;
+}
+
+@keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(4px);
+  }
+}
+
+@keyframes move-from-top {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+@keyframes move-out-to-top {
+  from {
+    top: 50%;
+  }
+  to {
+    top: -50%;
+  }
+}
