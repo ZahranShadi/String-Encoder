@@ -1,7 +1,7 @@
 const encoder = require("../encoder").encodeString;
 
 test("XXX encoded should not be equal to x3", () => {
-  expect(encoder("XXX")).toBe("x3");
+  expect(encoder("XXX")).not.toBe("x3");
 });
 
 test("Encodes XXX to be equal to X3", () => {
